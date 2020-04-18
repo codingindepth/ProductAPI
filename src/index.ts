@@ -3,6 +3,7 @@ import express from 'express';
 import * as dotenv from "dotenv";
 
 import helmet from "helmet";
+import {getProductList} from './product-crud';
 
 dotenv.config();
 
@@ -25,3 +26,4 @@ const server = app.listen(PORT, () => {
 // Send message for default URL
 app.get('/', (req, res) => res.send('Hello World with Express'));
 
+app.get('/products', getProductList);
