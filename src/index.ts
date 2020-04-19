@@ -1,16 +1,24 @@
 import cors from 'cors';
 import express from 'express';
 import * as dotenv from "dotenv";
-
+import mongoose from 'mongoose';
 import helmet from "helmet";
 import {getProductList} from './product-crud';
 
 dotenv.config();
 
 if (!process.env.PORT) {
+  console.log(`Error to get ports`);
     process.exit(1);
  }
  
+mongoose.Promise = Promise;
+mongoose.connect("mongodb://localhost:27017/codeindepth");
+console.log(`Connecting to MONGO`);
+if (process.env.NODE_ENV === 'development') {
+  mongoose.set('debug', true);
+}
+
  const PORT: number = parseInt(process.env.PORT as string, 10);
  
  const app = express();
