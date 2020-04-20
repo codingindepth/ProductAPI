@@ -10,3 +10,6 @@ import {
     proddescription: String,
     prodRating: Number,
   });
+
+const products = mongoose.model("ProductModel", Product);
+export default products;
