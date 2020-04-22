@@ -1,5 +1,6 @@
 import * as ProductService from './product-crud.service';
 import { Product } from './product';
+import products from './product-schema';
 
 export const getProductList = async (req:any, res:any) => {
     const productList: Product[] = await ProductService.getAllProducts();

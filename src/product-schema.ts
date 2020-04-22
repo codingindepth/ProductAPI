@@ -11,5 +11,5 @@ import {
     prodRating: Number,
   });
 
-const products = mongoose.model("ProductModel", Product);
+const products = mongoose.model("products", Product);
 export default products;
