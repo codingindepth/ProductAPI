@@ -25,10 +25,10 @@
     "@types/helmet": "0.0.45",
     "@types/mongoose": "^5.7.12",
     "@types/node": "^13.13.0",
-    "ts-loader": "^7.0.0",
+    "ts-loader": "^9.4.2",
     "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^1.7.2"
   }
 }
